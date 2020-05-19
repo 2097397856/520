@@ -15,6 +15,40 @@
 <!--
 .STYLE1 {color: #666666}
 -->
+		     .wrap{
+            position: relative;
+        }
+        .text{
+            position: absolute;
+            top: 41%;
+            left: 46%;
+            transform: translate(-50%,-50%);
+            /* border: 1px solid black; */
+            border-radius: 10%;
+            padding: 0 5px;
+            color: white;
+            background-color: goldenrod;
+            animation: move 2s 0.5s  infinite;
+            /* 执行后保持最后状态 */
+            animation-direction:alternate-reverse;
+        }
+        .text::after{
+            content: "";
+            position: absolute;
+            top: 80%;
+            left: 0%;
+            border-top: 8px solid goldenrod;
+            border-bottom: 13px solid  transparent;
+            border-left: 13px solid transparent;
+            border-right: 13px solid transparent;
+        }
+        @keyframes move {
+            from{
+                transform: translate(0px,10px);
+            } to{
+                transform: translate(0,0);
+            }
+        }
         </style>
 </head>
     <body>
